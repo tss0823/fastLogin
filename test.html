@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="fastLogin.css" />
+
+</head>
+<body>
+<div>
+    <input type="text" id="txtName" />
+    <div class="bdsug" style="height: auto; display: none;">
+        <div>
+            <div data-key="jquery下拉菜单插件" class="bdsug-overflow">jquery下拉菜单插件</div>
+            <div data-key="jquery下拉菜单代码" class="bdsug-overflow">jquery下拉菜单代码</div>
+            <div data-key="jquery下拉菜单代码" class="bdsug-overflow">jquery下拉菜单代码</div>
+            <div data-key="jquery下拉菜单代码" class="bdsug-overflow">jquery下拉菜单代码</div>
+            <div data-key="jquery下拉菜单代码" class="bdsug-overflow">jquery下拉菜单代码</div>
+            <div data-key="jquery下拉菜单代码" class="bdsug-overflow">jquery下拉菜单代码</div>
+        </div>
+    </div>
+</div>
+<div>
+    <input type="text" id="txtName2" />
+</div>
+
+
+<script src="jquery-2.0.0.min.js"></script>
+<script >
+$(document).ready(function(){
+    $("#txtName").bind("click",function(){
+        var txtW = $(this).css("width");
+        var txtBorderW = $(this).css("border-width");
+        var w = parseInt(txtW.substring(0,txtW.indexOf("px"))) + parseInt(txtBorderW.substring(0,txtBorderW.indexOf("px"))) / 2;
+        console.log("inputWidth="+w);
+        $(".bdsug").css("width",w+"px");
+        var li_w = w - 16;
+        $(".bdsug").find("li").css("width",li_w+"px");
+        $(".bdsug").show();
+    })
+
+    $(".bdsug").find("li").on("mouseover",function(){
+        $(this).addClass("bdsug-s");
+    });
+    $(".bdsug").find("li").on("mouseout",function(){
+        $(this).removeClass("bdsug-s");
+    });
+    $(".bdsug").find("li").on("click",function(){
+        var value = $(this).attr("data-key");
+        $("#txtName").val(value);
+        $(".bdsug").hide();
+    });
+
+});
+
+</script>
+</body>
+</html>

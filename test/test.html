@@ -1,0 +1,16 @@
+<html>
+<script type="text/javascript" src="../jquery-2.0.0.min.js"></script>  
+<script type="text/javascript" src="jquery.autocomplete.js"></script>  
+<link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />  
+<input type="text"  name="fund_code" id="fund_code"  />  
+<div id="getdata"></div>
+<script>
+
+var arrData = ["aa","bb","bb1","bb2","bb3","bb4"];
+   $(document).ready(function(){
+      $("#fund_code").autocomplete(arrData);
+   
+   
+   });
+</script>
+</html>

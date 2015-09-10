@@ -1,0 +1,34 @@
+.bdsug {
+    position: absolute;
+    width: 536px;
+    background: #fff;
+    display: none;
+    border: 1px solid #817f82;
+    z-index: 9999;
+}
+
+.bdsug ul li {
+    display: list-item;
+}
+.bdsug ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bdsug div {
+    color: #333;
+    list-style: none;
+    margin: 0;
+    font-size: 12px;
+    line-height: 24px;
+    white-space: nowrap;
+    height: 26px;
+    left: -9999px;
+    top: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bdsug-s {
+    background: #ebebeb
+}

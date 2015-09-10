@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        fastLogin settings
+    </title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+</head>
+<body>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#list" role="tab" data-toggle="tab">列表</a></li>
+    <li role="presentation"><a href="#add" role="tab" data-toggle="tab">新增</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content" style="margin:10px 5px">
+    <!--data list-->
+    <div role="tabpanel" class="tab-pane active" id="list">
+        <table class="table table-striped" id="tbList">
+            <thead>
+              <tr>
+                  <td>ID</td>
+                  <td>域名</td>
+                  <td>userID</td>
+                  <td>pwdID</td>
+                  <td>JSON值</td>
+                  <td>操作</td>
+              </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!--data add-->
+    <div role="tabpanel" class="tab-pane" id="add">
+        <table class="table table-bordered">
+            <tr>
+                <td>登录URL：</td>
+                <td colspan="3"><input type="text" name="loginUrl" id="loginUrl" class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>用户ID：</td>
+                <td><input type="text" name="userID" id="userID"  class="form-control"/></td>
+                <td>密码ID：</td>
+                <td><input type="text" name="pwdID" id="pwdID"  class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>值：</td>
+                <td colspan="3"><input type="text"  id="userV1"  class="form-control"/><input type="text"  id="pwdV1"  class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>值：</td>
+                <td colspan="3"><input type="text"  id="userV2"  class="form-control"/><input type="text"  id="pwdV2"  class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>值：</td>
+                <td colspan="3"><input type="text"  id="userV3"  class="form-control"/><input type="text"  id="pwdV3"  class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>值：</td>
+                <td colspan="3"><input type="text"  id="userV4"  class="form-control"/><input type="text"  id="pwdV4"  class="form-control"/></td>
+            </tr>
+            <tr>
+                <td>值：</td>
+                <td colspan="3"><input type="text"  id="userV5"  class="form-control"/><input type="text"  id="pwdV5"  class="form-control"/></td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-success" id="btnSave">保存</button>
+    </div>
+
+</div>
+</body>
+<script src="jquery-2.0.0.min.js"></script>
+<script src="jquery.validator.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="fastLogin.js"></script>
+</html>

@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "fastLogin",
+	"version": "0.0.1",
+	"icons": {
+        "128": "icon.ico"
+    },
+	"background": { "scripts": ["jquery-2.0.0.min.js", "background.js"] },
+	"browser_action": {
+		"default_title": "fastLogin", // shown in tooltip
+		"default_popup": "popup.html"
+	},
+	"permissions" : ["contextMenus","http://localhost/", "https://*/*", "http://*/*", "tabs"],
+	"content_scripts":[{
+		"matches":["http://*/*","https://*/*"],
+        "css":["fastLogin.css","jquery.autocomplete.css"],
+		"js":["jquery-2.0.0.min.js", "jquery.autocomplete.js", "content_script.js"]
+	}]
+}
